@@ -57,11 +57,9 @@ public class Register extends Activity {
         builder.setCancelable(false);
         builder.setIcon(R.drawable.nobita48);
         builder.setTitle("โปรดรวจสอบข้อมูล");
-        builder.setMessage("User = " + userString + "\n"+
-                "Password = " + passString + "\n"+
-                "PasswordConfirm = " + passConString + "\n"+
-                "Name = " + nameString + "\n"+
-                "Telephone = " + telString + "\n");
+        builder.setMessage("ชื่อผู้ใช้งาน = " + userString + "\n"+
+                "ชื่อ-นามสกุล = " + nameString + "\n"+
+                "เบอร์โทรติดต่อ = " + telString + "\n");
 
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
@@ -76,6 +74,7 @@ public class Register extends Activity {
                 dialog.dismiss();
             }
         });
+        builder.show();
     }//
 
     private void uploadToServer() {
