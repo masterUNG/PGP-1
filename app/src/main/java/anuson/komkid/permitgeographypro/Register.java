@@ -1,6 +1,8 @@
 package anuson.komkid.permitgeographypro;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -38,9 +40,46 @@ public class Register extends Activity {
             //Have space
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, "มีช่องว่าง","กรุณากรอกทุกช่องครับ"); //เมื่อมีช่องว่างให้แสดง ข้อความ
+        } else if (passString.equals(passConString)) {
+
+            confirmData();
+
+        } else {
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this, "รหัสไม่ตรงกัน","กรุณากรอกรหัสผ่านให้ตรงกันครับ");//เช็ครหัสผ่านให้ตรง
         }
 
+
     }//clickSaveData
+
+    private void confirmData() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.nobita48);
+        builder.setTitle("โปรดรวจสอบข้อมูล");
+        builder.setMessage("User = " + userString + "\n"+
+                "Password = " + passString + "\n"+
+                "PasswordConfirm = " + passConString + "\n"+
+                "Name = " + nameString + "\n"+
+                "Telephone = " + telString + "\n");
+
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                uploadToServer();
+                dialog.dismiss();
+            }
+        });
+    }//
+
+    private void uploadToServer() {
+    }
 
     private boolean checkSpace() {
         return userString.equals("")||
