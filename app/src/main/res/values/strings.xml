@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Permit Geography Pro</string>
+    <string name="name_user">ชื่อผู้ใช้งาน</string>
+    <string name="password">รหัสผ่าน</string>
+    <string name="password_con">ยืนยันรหัสผ่าน</string>
+    <string name="name_thai">ชื่อ-นามสกุล</string>
+    <string name="tel">เบอร์โทรติดต่อ</string>
+    <string name="name_tile">ลงทะเบียนการใช้งงาน</string>
+    <string name="confirm_serve">ยืนยันการสมัคร</string>
+
 </resources>
