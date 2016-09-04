@@ -31,6 +31,8 @@ public class Register extends Activity {
 
     private  static final String urlPHP = "http://swiftcodingthai.com/gam/php_add_member.php";
 
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);

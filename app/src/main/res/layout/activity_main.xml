@@ -23,12 +23,13 @@
             android:id="@+id/editText"
             android:layout_gravity="center_horizontal"
             android:autoText="false"
-            android:hint="ชื่อผู้ใช้" />
+            android:hint="ชื่อผู้ใช้"
+            android:inputType="text" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="numberPassword"
+            android:inputType="numberPassword|textPassword"
             android:ems="10"
             android:id="@+id/editText2"
             android:layout_gravity="center_horizontal"
