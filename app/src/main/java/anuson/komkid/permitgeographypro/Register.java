@@ -68,7 +68,7 @@ public class Register extends Activity {
     private void confirmData() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
-        builder.setIcon(R.drawable.nobita48);
+        builder.setIcon(R.drawable.dule_icon);
         builder.setTitle("โปรดรวจสอบข้อมูล");
         builder.setMessage("ชื่อผู้ใช้งาน = " + userString + "\n"+
                 "ชื่อ-นามสกุล = " + nameString + "\n"+

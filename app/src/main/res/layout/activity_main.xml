@@ -14,7 +14,8 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:id="@+id/linearLayout">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -39,7 +40,7 @@
             android:hint="รหัสผ่าน" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="เข้าสู่ระบบ"
             android:id="@+id/button2"
@@ -75,5 +76,13 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageView2"
+        android:background="@drawable/logo_login2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp" />
 
 </RelativeLayout>
