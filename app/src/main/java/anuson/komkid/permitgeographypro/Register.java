@@ -4,8 +4,19 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+
+import java.io.IOException;
 
 
 public class Register extends Activity {
@@ -13,6 +24,8 @@ public class Register extends Activity {
     //Explicit
     private EditText userEditText,passEditText,passConEditText,nameEditText,telEditText ;
     private String userString,passString,passConString,nameString,telString;
+
+    private  static final String urlPHP = "http://swiftcodingthai.com/gam/php_add_member.php";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +91,31 @@ public class Register extends Activity {
     }//
 
     private void uploadToServer() {
-    }
+        OkHttpClient okHttpClient = new OkHttpClient();
+        RequestBody requestBody = new FormEncodingBuilder()
+                .add("isAdd", "true")
+                .add("Username", userString)
+                .add("Password", passString)
+                .add("Name", nameString)
+                .add("telephone",telString)
+                .build();
+        Request.Builder builder = new Request.Builder();
+        Request request = builder.url(urlPHP).post(requestBody).build();
+        Call call = okHttpClient.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Request request, IOException e) {
+                Log.d("4SepV1", "e==>" + e.toString());
+            }
+
+            @Override
+            public void onResponse(Response response) throws IOException {
+                Log.d("4SepV1", "Result ==>"+ response.body().string());
+            }
+        });
+
+
+    }//uploadToServer
 
     private boolean checkSpace() {
         return userString.equals("")||
