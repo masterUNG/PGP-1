@@ -101,7 +101,8 @@ public class Register extends Activity {
         builder.setTitle("โปรดรวจสอบข้อมูล");
         builder.setMessage("ชื่อผู้ใช้งาน = " + userString + "\n"+
                 "ชื่อ-นามสกุล = " + nameString + "\n"+
-                "เบอร์โทรติดต่อ = " + telString + "\n");
+                "เบอร์โทรติดต่อ = " + telString + "\n"+
+                "สถานะ = " + typeString);
 
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
@@ -127,6 +128,7 @@ public class Register extends Activity {
                 .add("Password", passString)
                 .add("Name", nameString)
                 .add("telephone",telString)
+                .add("type",typeString)
                 .build();
         Request.Builder builder = new Request.Builder();
         Request request = builder.url(urlPHP).post(requestBody).build();
