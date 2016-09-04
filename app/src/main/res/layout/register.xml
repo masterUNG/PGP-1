@@ -28,7 +28,8 @@
         android:layout_below="@+id/textView2"
         android:layout_above="@+id/button"
         android:layout_margin="15dp"
-        android:padding="15dp">
+        android:padding="15dp"
+        android:background="#82ffffff">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -47,7 +48,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText3"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                android:inputType="text" />
 
         </LinearLayout>
 
@@ -68,7 +70,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText4"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -88,7 +91,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText5"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -108,7 +112,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText6"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -128,7 +133,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText7"
-                android:layout_weight="2" />
+                android:layout_weight="2"
+                android:inputType="number"
+                android:hint="08x-xxxxxxx" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
