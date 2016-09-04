@@ -10,7 +10,8 @@
         android:text="@string/name_tile"
         android:id="@+id/textView2"
         android:textSize="25dp"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
 
     <Button
         android:layout_width="match_parent"
@@ -27,9 +28,10 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/textView2"
         android:layout_above="@+id/button"
-        android:layout_margin="15dp"
         android:padding="15dp"
-        android:background="#82ffffff">
+        android:background="#82ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_margin="10dp">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -137,5 +139,54 @@
                 android:inputType="number"
                 android:hint="08x-xxxxxxx" />
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/textView9" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:layout_weight="1"
+                android:src="@drawable/bird48" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:src="@drawable/doremon48"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ragType">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton"
+                android:layout_weight="1"
+                android:layout_marginLeft="70dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioButton2"
+                android:layout_weight="1"
+                android:layout_marginLeft="70dp" />
+        </RadioGroup>
+
     </LinearLayout>
 </RelativeLayout>

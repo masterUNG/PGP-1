@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import com.squareup.okhttp.Call;
 import com.squareup.okhttp.Callback;
@@ -23,7 +25,9 @@ public class Register extends Activity {
 
     //Explicit
     private EditText userEditText,passEditText,passConEditText,nameEditText,telEditText ;
-    private String userString,passString,passConString,nameString,telString;
+    private String userString,passString,passConString,nameString,telString, typeString;
+    private RadioGroup radioGroup;
+    private RadioButton famerRadioButton, buyerRadioButton;
 
     private  static final String urlPHP = "http://swiftcodingthai.com/gam/php_add_member.php";
 
@@ -37,6 +41,27 @@ public class Register extends Activity {
         passConEditText = (EditText) findViewById(R.id.editText5);
         nameEditText = (EditText) findViewById(R.id.editText6);
         telEditText = (EditText) findViewById(R.id.editText7);
+        radioGroup = (RadioGroup) findViewById(R.id.ragType);
+        famerRadioButton = (RadioButton) findViewById(R.id.radioButton);
+        buyerRadioButton = (RadioButton) findViewById(R.id.radioButton2);
+
+        //Radio Controller
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId) {
+                    case  R.id.radioButton:
+                        typeString = "0";
+                        break;
+                    case  R.id.radioButton2:
+                        typeString = "1";
+                        break;
+
+                }
+            }
+        });
+
 
 
     }//Main Method
@@ -53,16 +78,20 @@ public class Register extends Activity {
             //Have space
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, "มีช่องว่าง","กรุณากรอกทุกช่องครับ"); //เมื่อมีช่องว่างให้แสดง ข้อความ
-        } else if (passString.equals(passConString)) {
+        } else if (!passString.equals(passConString)) {
 
-            confirmData();
-
-        } else {
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, "รหัสไม่ตรงกัน","กรุณากรอกรหัสผ่านให้ตรงกันครับ");//เช็ครหัสผ่านให้ตรง
+
+        } else if (!(famerRadioButton.isChecked() || buyerRadioButton.isChecked())) {
+
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this, "ยังไม่เลือก Type User", "กรุณาเลือก Type User");
+        }else{
+
+                confirmData();
+
         }
-
-
     }//clickSaveData
 
     private void confirmData() {
