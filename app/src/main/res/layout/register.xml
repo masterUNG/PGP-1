@@ -140,29 +140,39 @@
                 android:hint="08x-xxxxxxx" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/textView9" />
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView9"
+                android:text="@string/type"
+                android:textSize="20dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView3"
                 android:layout_weight="1"
-                android:src="@drawable/bird48" />
+                android:src="@drawable/iconfam" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/imageView4"
-                android:src="@drawable/doremon48"
+                android:src="@drawable/iconman"
                 android:layout_weight="1" />
 
         </LinearLayout>

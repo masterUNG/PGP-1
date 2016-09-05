@@ -17,6 +17,7 @@ import com.squareup.okhttp.OkHttpClient;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
+import com.squareup.okhttp.internal.Internal;
 
 import java.io.IOException;
 
@@ -28,6 +29,8 @@ public class Register extends Activity {
     private String userString,passString,passConString,nameString,telString, typeString;
     private RadioGroup radioGroup;
     private RadioButton famerRadioButton, buyerRadioButton;
+    private String[] typeStrings = new String[]{"เกษตรกร","ผู้ใช้งานทั่วไป"};
+
 
     private  static final String urlPHP = "http://swiftcodingthai.com/gam/php_add_member.php";
 
@@ -104,7 +107,8 @@ public class Register extends Activity {
         builder.setMessage("ชื่อผู้ใช้งาน = " + userString + "\n"+
                 "ชื่อ-นามสกุล = " + nameString + "\n"+
                 "เบอร์โทรติดต่อ = " + telString + "\n"+
-                "สถานะ = " + typeString);
+                "สถานะ = " + typeStrings[Integer.parseInt(typeString)]);
+                //โชวข้อมูลการกรอก การแจ้งเตือนครั้งสุดท้าย
 
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override

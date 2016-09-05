@@ -7,5 +7,6 @@
     <string name="tel">เบอร์โทรติดต่อ</string>
     <string name="name_tile">ลงทะเบียนการใช้งงาน</string>
     <string name="confirm_serve">ยืนยันการสมัคร</string>
+    <string name="type">สถานะการลงทะเบียน</string>
 
 </resources>
