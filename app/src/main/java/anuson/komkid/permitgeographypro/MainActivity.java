@@ -25,6 +25,30 @@ public class MainActivity extends AppCompatActivity {
             ,"http://swiftcodingthai.com/gam/php_get_member_farmer.php"};
     private RadioGroup radioGroup;
     private int index = 0;
+    private  String[] columnUserStrings = new String[]{
+            "mem_u_id",
+            "mem_u_user",
+            "mem_u_pass",
+            "mem_u_name",
+            "mem_u_add",
+            "tmem_u_mail",
+            "mem_u_tel",
+            "mem_u_key"};
+    private  String[] columnfarmerStrings = new String[]{
+            "mem_id",
+            "mem_user",
+            "mem_pass",
+            "mem_name",
+            "mem_add",
+            "mem_tel",
+            "mem_key",
+            "mem_farm_name",
+            "mem_farm_type",
+            "mem_farm_area",
+            "mem_farm_latitude",
+            "mem_farm_longtitude",
+            "mem_farm_add",
+            "mem_pictures",};
 
 
     @Override
@@ -108,6 +132,12 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(s);
 
             Log.d("2octV2","JSON ==>" + s);
+
+            try{
+
+            }catch (Exception e){
+                Log.d("2octV2"," e onPost" + e.toString());
+            }
         }
     }//SynMember
 
