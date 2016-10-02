@@ -177,6 +177,8 @@ public class Register_user extends Activity {
             @Override
             public void onResponse(Response response) throws IOException {
                 Log.d("4SepV2", "Result ==>"+ response.body().string());
+
+                finish();
             }
         });
     }//uploadToServer
