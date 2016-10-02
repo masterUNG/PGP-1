@@ -5,8 +5,18 @@
     <string name="password_con">ยืนยันรหัสผ่าน</string>
     <string name="name_thai">ชื่อ-นามสกุล</string>
     <string name="tel">เบอร์โทรติดต่อ</string>
-    <string name="name_tile">ลงทะเบียนการใช้งงาน</string>
+    <string name="name_tile">ลงทะเบียน ผู้ใช้งาน</string>
     <string name="confirm_serve">ยืนยันการสมัคร</string>
     <string name="type">สถานะการลงทะเบียน</string>
+
+    <string name="name_register">ชื่อ-นามสกุล</string>
+    <string name="add">ที่อยู่ปัจจุบัน</string>
+    <string name="email">E-mail</string>
+    <string name="key">เลขบัตรประชาชน</string>
+    <string name="text1">ข้อมูลการล็อคอิน</string>
+    <string name="text2">ข้อมูลส่วนตัว</string>
+
+    <string name="text3">เมนู ผู้ใช้งาน</string>
+    <string name="text4">เมนู เกษตร</string>
 
 </resources>

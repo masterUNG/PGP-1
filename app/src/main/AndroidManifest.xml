@@ -20,6 +20,9 @@
 
         <activity   android:name=".MainActivity" android:screenOrientation="portrait"/>
         <activity   android:name=".Register" android:screenOrientation="portrait"/>
+        <activity   android:name=".Register_user" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_farmer" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_user" android:screenOrientation="portrait"/>
 
     </application>
 

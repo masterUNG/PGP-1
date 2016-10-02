@@ -66,9 +66,6 @@ public class Register extends Activity {
                 }
             }
         });
-
-
-
     }//Main Method
 
     public void clickSaveData(View view){
@@ -150,8 +147,6 @@ public class Register extends Activity {
                 Log.d("4SepV1", "Result ==>"+ response.body().string());
             }
         });
-
-
     }//uploadToServer
 
     private boolean checkSpace() {

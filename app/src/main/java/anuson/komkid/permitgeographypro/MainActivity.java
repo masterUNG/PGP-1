@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView tvw4 = (TextView) findViewById(R.id.textView4);
         tvw4.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                Intent newActivity = new Intent(MainActivity.this,Register.class);
+                Intent newActivity = new Intent(MainActivity.this,Register_user.class);
                 startActivity(newActivity);
                 }
             }
