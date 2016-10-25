@@ -19,10 +19,18 @@
         </activity>
 
         <activity   android:name=".MainActivity" android:screenOrientation="portrait"/>
-        <activity   android:name=".Register" android:screenOrientation="portrait"/>
         <activity   android:name=".Register_user" android:screenOrientation="portrait"/>
+
         <activity   android:name=".Menu_farmer" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_farmer_1" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_farmer_2" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_farmer_3" android:screenOrientation="portrait"/>
+
+
         <activity   android:name=".Menu_user" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_user_1" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_user_2" android:screenOrientation="portrait"/>
+        <activity   android:name=".Menu_user_3" android:screenOrientation="portrait"/>
 
     </application>
 

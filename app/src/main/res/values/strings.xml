@@ -15,8 +15,10 @@
     <string name="key">เลขบัตรประชาชน</string>
     <string name="text1">ข้อมูลการล็อคอิน</string>
     <string name="text2">ข้อมูลส่วนตัว</string>
-
+    //สถานะ
     <string name="text3">ผู้ใช้งาน</string>
     <string name="text4">เกษตร</string>
+
+
 
 </resources>

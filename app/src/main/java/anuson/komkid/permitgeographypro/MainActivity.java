@@ -201,7 +201,18 @@ public class MainActivity extends AppCompatActivity {
                             "Please Try Again Password False");
                 }else {
                     //password Trie
-                    Toast.makeText(context,"Welcome", Toast.LENGTH_SHORT).show();
+                    switch (index) {
+                        case 0:  // for User
+                            Intent newActivity = new Intent(MainActivity.this, Menu_user.class);
+                            startActivity(newActivity);
+                            Toast.makeText(context, "Welcome ", Toast.LENGTH_SHORT).show();
+                            break;
+                        case 1: // for Farmeradmin
+                            Intent newActivity2 = new Intent(MainActivity.this, Menu_farmer.class);
+                            startActivity(newActivity2);
+                            Toast.makeText(context, "Welcome ", Toast.LENGTH_SHORT).show();
+                            break;
+                    }
                 }
 
              } catch (Exception e) {
