@@ -23,7 +23,7 @@ public class Menu_user extends TabActivity {
         TabHost.TabSpec tab4 = tabHost.newTabSpec("ABA MAPS");
 
         //tab1.setIndicator("Tab1");
-        tab1.setIndicator("",getResources().getDrawable(R.mipmap.ic_launcher));
+        tab1.setIndicator("",getResources().getDrawable(R.drawable.iconman));
         tab1.setContent(new Intent(this, Menu_user_1.class));
 
         tab2.setIndicator("ค้นหาสวน");
