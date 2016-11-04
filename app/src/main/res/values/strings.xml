@@ -34,8 +34,9 @@
     //รายการประกาศ
     <string name="text11">โพส</string>
     <string name="text12">ผู้จอง</string>
-    <string name="text13">วันที่สิ้นสุด</string>
-
+    <string name="text13">วันที่เริ่มขาย</string>
+    <string name="text14">วันที่สิ้นสุด</string>
+    <string name="text15">สถานะ</string>
     //spinner
     <string-array name="country_arrays">
         <item>1 วัน</item>
@@ -47,8 +48,7 @@
         <item>7 วัน</item>
     </string-array>
 
-    <string name="text14"></string>
-    <string name="text15"></string>
+
 
 
 

@@ -22,8 +22,8 @@ public class Menu_farmer extends TabActivity{
             TabHost.TabSpec tab2 = tabHost.newTabSpec("ABA DOIS");
             TabHost.TabSpec tab3 = tabHost.newTabSpec("ABA TRES");
 
-            //tab1.setIndicator("Tab1");
-            tab1.setIndicator("",getResources().getDrawable(R.drawable.iconfam));
+            tab1.setIndicator("หน้าแรก");
+            //tab1.setIndicator("",getResources().getDrawable(R.drawable.));
             tab1.setContent(new Intent(this, Menu_farmer_1.class));
 
             tab2.setIndicator("ลงประกาศ");

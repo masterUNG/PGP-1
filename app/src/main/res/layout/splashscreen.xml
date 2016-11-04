@@ -6,7 +6,7 @@
     android:id="@+id/lin_lay"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#669900"
+
     android:weightSum="1">
 
     <ImageView

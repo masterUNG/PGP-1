@@ -22,12 +22,12 @@ public class Menu_user extends TabActivity {
         TabHost.TabSpec tab3 = tabHost.newTabSpec("ABA TRES");
         TabHost.TabSpec tab4 = tabHost.newTabSpec("ABA MAPS");
 
-        //tab1.setIndicator("Tab1");
-        tab1.setIndicator("",getResources().getDrawable(R.drawable.iconman));
+        tab1.setIndicator("หน้าแรก");
+        //tab1.setIndicator("",getResources().getDrawable(R.drawable.home_1));
         tab1.setContent(new Intent(this, Menu_user_1.class));
 
         tab2.setIndicator("ค้นหาสวน");
-        //tab2.setIndicator("",getResources().getDrawable(R.mipmap.ic_launcher));
+        //tab2.setIndicator("",getResources().getDrawable(R.drawable.home_1));
         tab2.setContent(new Intent(this, MapsActivity.class));
 
         tab3.setIndicator("การจอง");
