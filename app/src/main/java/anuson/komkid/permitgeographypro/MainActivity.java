@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private String userString, passwordString;
     private String[] urlStrings = new String[]{
             "http://swiftcodingthai.com/gam/php_get_member_user.php",
-            "http://swiftcodingthai.com/gam/php_get_member_farmer.php"};
+            "http://swiftcodingthai.com/gam/php_get_member_farmer.php",
+            "http://swiftcodingthai.com/gam/php_get_advice.php"};
     private RadioGroup radioGroup;
     private int index = 0;
     private String[] columnUserStrings = new String[]{
@@ -49,11 +50,16 @@ public class MainActivity extends AppCompatActivity {
             "mem_farm_name",
             "mem_farm_type",
             "mem_farm_area",
+            "mem_farm_pic",
             "mem_farm_latitude",
             "mem_farm_longtitude",
             "mem_farm_add",
             "mem_pictures"};
-    private String[] loginStrings;
+    private  String[] columnadviceStrings = new String[]{
+            "advice_fruit_id",
+            "advice_fruit_text",
+            "advice_fruit_pictures"};
+    private String[] loginStrings, adviceStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         loginStrings = new String[columnfarmerStrings.length];
+                        adviceStrings = new String[columnadviceStrings.length];
                         break;
                 }
 
@@ -204,13 +211,24 @@ public class MainActivity extends AppCompatActivity {
                     switch (index) {
                         case 0:  // for User
                             Intent newActivity = new Intent(MainActivity.this, Menu_user.class);
+
+                            //ส่งค่าไป ใน Login
+                            newActivity.putExtra("Login", loginStrings);
+
+
                             startActivity(newActivity);
-                            Toast.makeText(context, "Welcome ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Welcome", Toast.LENGTH_SHORT).show();
                             break;
                         case 1: // for Farmeradmin
                             Intent newActivity2 = new Intent(MainActivity.this, Menu_farmer.class);
+
+                            //ส่งค่าไป ใน Login
+                            newActivity2.putExtra("Login", loginStrings);
+                            newActivity2.putExtra("Advice", adviceStrings);
+
+
                             startActivity(newActivity2);
-                            Toast.makeText(context, "Welcome ", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(context, "Welcome", Toast.LENGTH_SHORT).show();
                             break;
                     }
                 }

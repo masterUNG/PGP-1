@@ -2,8 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ggg">
 
     <LinearLayout
         android:orientation="vertical"
@@ -43,26 +45,26 @@
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText7"
                 android:layout_weight="1"
                 android:hint="@string/name_register"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
             <EditText
-
-
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText9"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:hint="@string/add" />
 
             <EditText
@@ -70,23 +72,25 @@
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText10"
                 android:layout_weight="1"
                 android:hint="@string/email"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textSize="14sp" />
+                android:textSize="18sp" />
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText11"
                 android:layout_weight="1"
                 android:hint="เบอร์โทรศัพท์"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp" />
@@ -97,11 +101,12 @@
                 android:inputType="number"
                 android:maxLength="13"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText12"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
-                android:textSize="14sp"
+                android:textSize="18sp"
                 android:hint="@string/key"/>
 
         </LinearLayout>
@@ -126,6 +131,7 @@
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText8"
                 android:layout_weight="1"
                 android:hint="@string/name_user"
@@ -139,6 +145,7 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText13"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
@@ -151,13 +158,13 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPassword"
                 android:ems="10"
+                android:background="@drawable/shape_button_green"
                 android:id="@+id/editText14"
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="5dp"
                 android:hint="ยืนยันรหัสผ่าน" />
-
 
         </LinearLayout>
 
@@ -167,6 +174,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/button4"
             android:layout_weight="1"
+            android:background="@drawable/shape_button_green_1"
             android:onClick="clickSaveData" />
 
     </LinearLayout>

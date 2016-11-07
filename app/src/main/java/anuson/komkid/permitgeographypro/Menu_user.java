@@ -4,13 +4,16 @@ import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.test.PerformanceTestCase;
+import android.util.Log;
 import android.widget.TabHost;
 
-/**
- * Created by komkrid on 28/9/2559.
- */
+
 @SuppressWarnings("deprecation")
 public class Menu_user extends TabActivity {
+
+    private String[] userLoginStrings;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_user);
@@ -22,9 +25,19 @@ public class Menu_user extends TabActivity {
         TabHost.TabSpec tab3 = tabHost.newTabSpec("ABA TRES");
         TabHost.TabSpec tab4 = tabHost.newTabSpec("ABA MAPS");
 
+        //Get Valuse From
+        userLoginStrings = getIntent().getStringArrayExtra("Login");
+
+        //Check userLogin
+        for (int i=0;i<userLoginStrings.length;i++){
+            Log.d("4novV1","userLogin"+ i +"]="+ userLoginStrings[i]);
+        }//for
+
+
         tab1.setIndicator("หน้าแรก");
-        //tab1.setIndicator("",getResources().getDrawable(R.drawable.home_1));
-        tab1.setContent(new Intent(this, Menu_user_1.class));
+        Intent intent= new Intent(Menu_user.this,Menu_user_1.class);
+        intent.putExtra("Login",userLoginStrings);
+        tab1.setContent(intent);
 
         tab2.setIndicator("ค้นหาสวน");
         //tab2.setIndicator("",getResources().getDrawable(R.drawable.home_1));

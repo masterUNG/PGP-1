@@ -2,19 +2,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/backgrok">
 
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="218dp">
+        android:layout_height="136dp"
+        android:weightSum="1">
 
         <ImageView
             android:layout_width="112dp"
             android:layout_height="115dp"
             app:srcCompat="@drawable/bird48"
-            android:id="@+id/imageView"
+            android:id="@+id/imvFarmer"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="5dp" />
@@ -22,7 +24,8 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_weight="1.13">
 
             <TextView
                 android:text="@string/text10"
@@ -37,45 +40,55 @@
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView8"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp" />
+                android:id="@+id/textView8" />
 
             <TextView
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView9"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp" />
+                android:id="@+id/textView9" />
 
             <TextView
                 android:text="TextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/textView10"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="10dp" />
+                android:id="@+id/textView10" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="170dp">
-        <android.support.v4.view.ViewPager
-        android:id="@+id/pager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-            android:background="@color/common_action_bar_splitter" />
+        android:layout_height="341dp"
+        android:weightSum="1">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            app:srcCompat="@drawable/bird48"
+            android:id="@+id/imageView5"
+            android:layout_margin="10dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="165dp"
+            android:layout_weight="0.05">
+            <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+                android:background="@color/common_action_bar_splitter" />
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="45dp"
         android:gravity="bottom">
 
 

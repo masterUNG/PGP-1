@@ -9,6 +9,7 @@ import android.view.View;
 import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 
 import com.squareup.okhttp.Call;
@@ -24,24 +25,48 @@ import java.io.IOException;
 
 public class Menu_farmer_2 extends Activity{
 
+        //Explicit
+        private String[] userLoginStrings;
+
+
+
         private EditText tiltleEditText,textEditText;
-        private String tiltleString,textString;
+        private String tiltleString,textString,memberString;
         private  static final String urlPHP ="http://swiftcodingthai.com/gam/php_add_post.php";
         private Spinner spnITEM;
+        private TextView textView ;
 
 
         protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu_farmer_2);
 
+            //ฺฺBind Widget
             tiltleEditText = (EditText) findViewById(R.id.editText19);
             textEditText = (EditText) findViewById(R.id.editText21);
+            textView = (TextView) findViewById(R.id.textView16);
+
+            //Get Valuse From
+            userLoginStrings = getIntent().getStringArrayExtra("Login");
+
+            //Check userLogin
+            for (int i = 0; i < userLoginStrings.length; i++) {
+                Log.d("4novV3", "userLogin" + i + "]=" + userLoginStrings[i]);
+                }//for
+
+            // Show Text
+            textView.setText(userLoginStrings[7]);
+
 
     }//onCreate
     public void clickSaveData(View view){
 
         tiltleString    = tiltleEditText.getText().toString().trim();
         textString      = textEditText.getText().toString().trim();
+
+        //Get Valuse From
+        userLoginStrings = getIntent().getStringArrayExtra("Login");
+        memberString    = userLoginStrings[0];
 
         if (checkSpace()) {
             MyAlert myAlert = new MyAlert();
@@ -81,6 +106,7 @@ public class Menu_farmer_2 extends Activity{
                 .add("isAdd", "true")
                 .add("post_tiltle", tiltleString)
                 .add("post_text", textString)
+                .add("post_member", memberString)
                 .build();
         Request.Builder builder = new Request.Builder();
         Request request = builder.url(urlPHP).post(requestBody).build();
