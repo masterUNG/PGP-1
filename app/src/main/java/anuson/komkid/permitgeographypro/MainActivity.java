@@ -26,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private String userString, passwordString;
     private String[] urlStrings = new String[]{
             "http://swiftcodingthai.com/gam/php_get_member_user.php",
-            "http://swiftcodingthai.com/gam/php_get_member_farmer.php",
-            "http://swiftcodingthai.com/gam/php_get_advice.php"};
+            "http://swiftcodingthai.com/gam/php_get_member_farmer.php"};
     private RadioGroup radioGroup;
     private int index = 0;
     private String[] columnUserStrings = new String[]{
@@ -55,10 +54,10 @@ public class MainActivity extends AppCompatActivity {
             "mem_farm_longtitude",
             "mem_farm_add",
             "mem_pictures"};
-    private  String[] columnadviceStrings = new String[]{
-            "advice_fruit_id",
-            "advice_fruit_text",
-            "advice_fruit_pictures"};
+//    private  String[] columnadviceStrings = new String[]{
+//            "advice_fruit_id",
+//            "advice_fruit_text",
+//            "advice_fruit_pictures"};
     private String[] loginStrings, adviceStrings;
 
     @Override
@@ -159,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case 1:
                         loginStrings = new String[columnfarmerStrings.length];
-                        adviceStrings = new String[columnadviceStrings.length];
                         break;
                 }
 

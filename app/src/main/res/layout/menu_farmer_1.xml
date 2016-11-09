@@ -10,7 +10,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="136dp"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:background="@color/wallet_highlighted_text_holo_light">
 
         <ImageView
             android:layout_width="112dp"
