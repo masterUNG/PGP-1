@@ -22,8 +22,8 @@ import com.squareup.picasso.Picasso;
 public class Menu_farmer_1 extends FragmentActivity {
 
     //Explicit
-    private ImageView imageView,imageView5;
-    private String[] userLoginStrings,adviceStrings;
+    private ImageView imageView,imageView6;
+    private String[] userLoginStrings;
     private TextView gardenNameTextView,userNameTextView,addressTextView;
 
 
@@ -41,7 +41,7 @@ public class Menu_farmer_1 extends FragmentActivity {
 
         //ฺฺBind Widget
         imageView = (ImageView) findViewById(R.id.imvFarmer);
-        imageView5 = (ImageView) findViewById(R.id.imageView5);
+        imageView6 = (ImageView) findViewById(R.id.imvFarmer1);
 
         gardenNameTextView = (TextView) findViewById(R.id.textView8);
         userNameTextView = (TextView) findViewById(R.id.textView9);
@@ -57,14 +57,14 @@ public class Menu_farmer_1 extends FragmentActivity {
 
         try {//แสดงรูปภาพ
             Picasso.with(Menu_farmer_1.this).load(userLoginStrings[14]).into(imageView);
-            Picasso.with(Menu_farmer_1.this).load(userLoginStrings[10]).into(imageView5);
+            Picasso.with(Menu_farmer_1.this).load(userLoginStrings[10]).into(imageView6);
         }catch (Exception e){
             e.printStackTrace();
         }//try
 
         //Show Text
-            gardenNameTextView.setText("ประเภทสวน :" + userLoginStrings[8]);
-            userNameTextView.setText("ชื่อ :" + userLoginStrings[3]);
+            gardenNameTextView.setText("ประเภทสวน : " + userLoginStrings[8]);
+            userNameTextView.setText("ชื่อ : " + userLoginStrings[3]);
             addressTextView.setText("ที่อยู่ : "+ userLoginStrings[4]);
 
 

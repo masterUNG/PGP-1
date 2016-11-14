@@ -20,7 +20,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView15"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:text="@string/text12"
@@ -28,14 +28,14 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView12"
             tools:text="@string/text12"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <TextView
             android:text="@string/text13"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView7"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:layout_weight="0.5" />
 
         <TextView
@@ -43,14 +43,15 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView21"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:layout_weight="0.5" />
 
         <TextView
             android:text="@string/text15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView22" />
+            android:id="@+id/textView22"
+            android:textSize="12sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -60,41 +61,42 @@
         android:layout_margin="10dp"
         android:weightSum="1">
         <TextView
-            android:text="text11"
+            android:text="001"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView1"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
         <TextView
-            android:text="text12"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView2"
-            tools:text="text12"
-            android:textSize="14sp" />
+            tools:text="ดุ้กดิ้ก"
+            android:textSize="12sp"
+            android:text="ดุ้กดิ้ก" />
 
         <TextView
-            android:text="text13"
+            android:text="09/11/59"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView3"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:layout_weight="0.5" />
 
         <TextView
-            android:text="text14"
+            android:text="09/11/59"
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:id="@+id/textView4"
-            android:textSize="14sp"
+            android:textSize="12sp"
             android:layout_weight="0.5" />
 
         <TextView
-            android:text="text15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView5" />
+            android:id="@+id/textView5"
+            android:text="กำลัง"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
