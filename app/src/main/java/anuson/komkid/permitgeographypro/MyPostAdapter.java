@@ -8,14 +8,14 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 /**
- * Created by komkrid on 27/11/2559.
+ * Created by masterUNG on 11/27/2016 AD.
  */
 
 public class MyPostAdapter extends BaseAdapter{
 
     //Explicit
     private Context context;
-    private String[] titleStrings, timeStrings,statusStrings;
+    private String[] titleStrings, timeStrings, statusStrings;
     private TextView titleTextView, timeTextView, statusTextView;
 
     public MyPostAdapter(Context context,
@@ -31,34 +31,34 @@ public class MyPostAdapter extends BaseAdapter{
     @Override
     public int getCount() {
         return titleStrings.length;
-
     }
 
     @Override
-    public Object getItem(int position) {
+    public Object getItem(int i) {
         return null;
     }
 
     @Override
-    public long getItemId(int position) {
+    public long getItemId(int i) {
         return 0;
     }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
+
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view1 = layoutInflater.inflate(R.layout.my_post_listview, viewGroup, false);
 
-        // Bind Windget
+        //Bind Widget
         titleTextView = (TextView) view1.findViewById(R.id.textView7);
         timeTextView = (TextView) view1.findViewById(R.id.textView17);
         statusTextView = (TextView) view1.findViewById(R.id.textView18);
 
-        //show text
+        //Show Text
         titleTextView.setText(titleStrings[i]);
         timeTextView.setText(timeStrings[i]);
         statusTextView.setText(statusStrings[i]);
 
         return view1;
     }
-}//Main class
+}   // Main Class
