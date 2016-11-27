@@ -89,7 +89,6 @@
                         android:layout_width="76dp"
                         android:layout_height="match_parent"
                         android:id="@+id/spinner"
-                        android:entries="@array/country_arrays"
                         android:layout_weight="0.03" />
                 </LinearLayout>
 
@@ -125,7 +124,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
-        android:onClick="clickSaveData"
+        android:onClick="clickSaveDataMemuFarm2"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+         />
 </RelativeLayout>

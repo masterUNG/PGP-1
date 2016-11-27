@@ -38,7 +38,7 @@
     <string name="text14">วันที่สิ้นสุด</string>
     <string name="text15">สถานะ</string>
     //spinner
-    <string-array name="country_arrays">
+    <string-array name="dayLeng">
         <item>1 วัน</item>
         <item>2 วัน</item>
         <item>3 วัน</item>
