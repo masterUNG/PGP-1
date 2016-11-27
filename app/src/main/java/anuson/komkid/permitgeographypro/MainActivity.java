@@ -54,11 +54,7 @@ public class MainActivity extends AppCompatActivity {
             "mem_farm_longtitude",
             "mem_farm_add",
             "mem_pictures"};
-//    private  String[] columnadviceStrings = new String[]{
-//            "advice_fruit_id",
-//            "advice_fruit_text",
-//            "advice_fruit_pictures"};
-    private String[] loginStrings, adviceStrings;
+    private String[] loginStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
                 return null;
             }
 
-        }   // doIn
+        }//doInBackground
 
         @Override
         protected void onPostExecute(String s) {
@@ -204,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                     MyAlert myAlert = new MyAlert();
                     myAlert.myDialog(context,"Password False",
                             "Please Try Again Password False");
-                }else {
+                } else {
                     //password Trie
                     switch (index) {
                         case 0:  // for User
@@ -222,9 +218,6 @@ public class MainActivity extends AppCompatActivity {
 
                             //ส่งค่าไป ใน Login
                             newActivity2.putExtra("Login", loginStrings);
-                            newActivity2.putExtra("Advice", adviceStrings);
-
-
                             startActivity(newActivity2);
                             Toast.makeText(context, "Welcome", Toast.LENGTH_SHORT).show();
                             break;

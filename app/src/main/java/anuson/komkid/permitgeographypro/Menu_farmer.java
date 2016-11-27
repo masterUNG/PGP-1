@@ -12,7 +12,7 @@ import android.widget.TabHost;
 @SuppressWarnings("deprecation")
 public class Menu_farmer extends TabActivity{
 
-        private String[] userLoginStrings,adviceStrings;
+        private String[] userLoginStrings;
 
 
         protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +46,9 @@ public class Menu_farmer extends TabActivity{
 
             tab3.setIndicator("รายการประกาศ");
             //tab3.setIndicator("",getResources().getDrawable(R.mipmap.ic_launcher));
-            tab3.setContent(new Intent(this, Menu_farmer_3.class));
+            Intent intent2 = new Intent(Menu_farmer.this,Menu_farmer_3.class);
+            intent2.putExtra("Login",userLoginStrings);
+            tab3.setContent(intent2);
 
             tabHost.addTab(tab1);
             tabHost.addTab(tab2);

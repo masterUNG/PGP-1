@@ -176,7 +176,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/button4"
             android:layout_weight="1"
-            android:background="@drawable/shape_button_green_1"
             android:onClick="clickSaveData" />
 
     </LinearLayout>

@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.support.v7.app.AlertDialog;
 import android.widget.EditText;
@@ -21,17 +22,16 @@ import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 
 public class Menu_farmer_2 extends Activity{
 
         //Explicit
         private String[] userLoginStrings;
-
-
-
         private EditText tiltleEditText,textEditText;
-        private String tiltleString,textString,memberString;
+        private String tiltleString,textString,memberString,datatimeString;
         private  static final String urlPHP ="http://swiftcodingthai.com/gam/php_add_post.php";
         private Spinner spnITEM;
         private TextView textView ;
@@ -57,8 +57,17 @@ public class Menu_farmer_2 extends Activity{
             // Show Text
             textView.setText(userLoginStrings[7]);
 
+            // Current Date
+            Calendar c = Calendar.getInstance();
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            String formatteDate = df.format(c.getTime());
+            //txtResult
 
+
+            datatimeString = formatteDate;
+            Log.d("24novV1", "userLogin" + datatimeString);
     }//onCreate
+
     public void clickSaveData(View view){
 
         tiltleString    = tiltleEditText.getText().toString().trim();
@@ -67,6 +76,7 @@ public class Menu_farmer_2 extends Activity{
         //Get Valuse From
         userLoginStrings = getIntent().getStringArrayExtra("Login");
         memberString    = userLoginStrings[0];
+
 
         if (checkSpace()) {
             MyAlert myAlert = new MyAlert();
@@ -107,6 +117,7 @@ public class Menu_farmer_2 extends Activity{
                 .add("post_tiltle", tiltleString)
                 .add("post_text", textString)
                 .add("post_member", memberString)
+                .add("post_data_ster", datatimeString)
                 .build();
         Request.Builder builder = new Request.Builder();
         Request request = builder.url(urlPHP).post(requestBody).build();
