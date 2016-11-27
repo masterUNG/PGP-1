@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
             "mem_pictures"};
     private String[] loginStrings;
 
+    // dookdik
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
