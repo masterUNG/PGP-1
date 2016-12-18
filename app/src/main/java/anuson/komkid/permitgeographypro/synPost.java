@@ -27,6 +27,7 @@ public class SynPost extends AsyncTask<Void, Void, String>{
         this.men_idString = men_idString;
     }
 
+
     @Override
     protected String doInBackground(Void... voids) {
 
