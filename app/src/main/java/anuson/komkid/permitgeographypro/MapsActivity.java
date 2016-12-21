@@ -20,12 +20,19 @@ import org.json.JSONObject;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
+    //Explicit
     private GoogleMap mMap;
+    private String[] loginStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        loginStrings = getIntent().getStringArrayExtra("Login");
+
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -109,6 +116,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 Intent intent = new Intent(MapsActivity.this, ListPostByUser.class);
                 intent.putExtra("mem_id", mem_id);
+                intent.putExtra("Login", loginStrings);
                 startActivity(intent);
 
                 dialogInterface.dismiss();

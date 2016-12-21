@@ -1,10 +1,8 @@
 package anuson.komkid.permitgeographypro;
 
-import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.test.PerformanceTestCase;
 import android.util.Log;
 import android.widget.TabHost;
 
@@ -40,8 +38,10 @@ public class Menu_user extends TabActivity {
         tab1.setContent(intent);
 
         tab2.setIndicator("ค้นหาสวน");
-        //tab2.setIndicator("",getResources().getDrawable(R.drawable.home_1));
-        tab2.setContent(new Intent(this, MapsActivity.class));
+
+        Intent intent1 = new Intent(Menu_user.this, MapsActivity.class);
+        intent1.putExtra("Login", userLoginStrings);
+        tab2.setContent(intent1);
 
         tab3.setIndicator("การจอง");
         //tab3.setIndicator("",getResources().getDrawable(R.mipmap.ic_launcher));

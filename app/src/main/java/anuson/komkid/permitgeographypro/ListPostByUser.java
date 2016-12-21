@@ -15,6 +15,7 @@ public class ListPostByUser extends AppCompatActivity {
 
     //Explicit
     private String mem_idString;
+    private String[] loginStrings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class ListPostByUser extends AppCompatActivity {
         //Setting
         mem_idString = getIntent().getStringExtra("mem_id");
         Log.d("21decV2", "mem_id ==> " + mem_idString);
+        loginStrings = getIntent().getStringArrayExtra("Login");
 
         try {
 
@@ -42,6 +44,7 @@ public class ListPostByUser extends AppCompatActivity {
             final String[] startStrings = new String[jsonArray.length()];
             final String[] pic1Strings = new String[jsonArray.length()];
             final String[] pic2Strings = new String[jsonArray.length()];
+            final String[] idStrings = new String[jsonArray.length()];
 
 
             for (int i = 0; i < jsonArray.length(); i++) {
@@ -56,6 +59,7 @@ public class ListPostByUser extends AppCompatActivity {
                 startStrings[i] = jsonObject.getString("post_data_ster");
                 pic1Strings[i] = jsonObject.getString("post_pic");
                 pic2Strings[i] = jsonObject.getString("post_pic_two");
+                idStrings[i] = jsonObject.getString("post_id");
 
             }   // for
 
@@ -77,6 +81,10 @@ public class ListPostByUser extends AppCompatActivity {
                     intent.putExtra("post_data_ster", startStrings[i]);
                     intent.putExtra("post_pic", pic1Strings[i]);
                     intent.putExtra("post_pic_two", pic2Strings[i]);
+
+                    intent.putExtra("Login", loginStrings);
+                    intent.putExtra("idPost", idStrings[i]);
+
                     startActivity(intent);
 
 

@@ -2,8 +2,9 @@ package anuson.komkid.permitgeographypro;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,7 +16,8 @@ public class ShowDetailByUser extends AppCompatActivity {
 
     //Explicit
     private String titleString, textString, startString, endString,
-            statusString, urlPic1String, urlPic2String;
+            statusString, urlPic1String, urlPic2String,
+            post_idString, mem_u_idString;
 
     private TextView titleTextView, textView, startTextView,
             endTextView, statusTextView;
@@ -24,12 +26,17 @@ public class ShowDetailByUser extends AppCompatActivity {
 
     private Button button, orderButton;
 
+    private String[] loginStrings;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_detail_by_user);
         //Bind Widget
         bindWidget();
+
+        //Setup
+        loginStrings = getIntent().getStringArrayExtra("Login");
 
         //Get Value From Intent
         titleString = getIntent().getStringExtra("post_tiltle");
@@ -103,7 +110,33 @@ public class ShowDetailByUser extends AppCompatActivity {
 
     private void saveValueToServer() {
 
-    }
+        post_idString = getIntent().getStringExtra("idPost");
+        mem_u_idString = loginStrings[0];
+
+        Log.d("21decV3", "post_idString ==> " + post_idString);
+        Log.d("21decV3", "mem_u_idString ==> " + loginStrings[0]);
+
+        try {
+
+            AddServer addServer = new AddServer(ShowDetailByUser.this,
+                    post_idString, mem_u_idString);
+            addServer.execute();
+
+            Log.d("21decV3", "Result addServer ==> " + addServer.get());
+
+            EditStatus editStatus = new EditStatus(ShowDetailByUser.this,
+                    post_idString, "1");
+            editStatus.execute();
+
+            Log.d("21decV3", "Result editStatus ==> " + editStatus.get());
+
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+
+    }   // saveValueToServer
 
     private void showView() {
 
