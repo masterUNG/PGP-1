@@ -1,5 +1,7 @@
 package anuson.komkid.permitgeographypro;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -62,9 +64,46 @@ public class ShowDetailByUser extends AppCompatActivity {
 
     private void confirmOrder() {
 
+        int i = Integer.parseInt(statusString);
+        if (i != 0) {
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(ShowDetailByUser.this, "ไม่สามารถจองได้",
+                    "สินค้าอยู่ในสภาวะ " + showStatus(statusString));
+        } else {
 
+            sureOrder();
+
+        }
 
     }   // confirmOrder
+
+    private void sureOrder() {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(ShowDetailByUser.this);
+        builder.setCancelable(false);
+        builder.setTitle("การจองสินค้า");
+        builder.setMessage("เงื่อนไขการจอง");
+        builder.setIcon(R.drawable.dule_icon);
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.dismiss();
+            }
+        });
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                saveValueToServer();
+                dialogInterface.dismiss();
+            }
+        });
+        builder.show();
+
+    }
+
+    private void saveValueToServer() {
+
+    }
 
     private void showView() {
 
