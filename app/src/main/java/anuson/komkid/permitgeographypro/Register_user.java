@@ -55,9 +55,23 @@ public class Register_user extends Activity {
         passwordString = passwordEditText.getText().toString().trim();
         password_conString = password_conEditText.getText().toString().trim();
 
+        int length = passwordString.length();
+
+//        String checkEmail = "@";
+//        boolean b = emailString.contains(checkEmail);
+
         if (checkSpace()) {
             MyAlert myAlert = new MyAlert();
-            myAlert.myDialog(this, "มีช่องว่าง","กรุณากรอกทุกช่องครับ"); //เมื่อมีช่องว่างให้แสดง ข้อความ
+            myAlert.myDialog(this, "มีช่องว่าง", "กรุณากรอกทุกช่องครับ"); //เมื่อมีช่องว่างให้แสดง ข้อความ
+
+//        }else if(b){
+//            MyAlert myAlert = new MyAlert();
+//            myAlert.myDialog(this, "E-mail ผิดพลาด","กรุณากรอก Email ที่ถูกต้อง");
+
+        }else if(length<8){
+            MyAlert myAlert = new MyAlert();
+            myAlert.myDialog(this, "รหัสผิดพลาด","กรุณากรอกรหัสมากกว่า 8 ตัวขึ้นไป");
+
         }else if (!passwordString.equals(password_conString)){
             MyAlert myAlert = new MyAlert();
             myAlert.myDialog(this, "รหัสไม่ตรงกัน","กรุณากรอกรหัสผ่านให้ตรงกันครับ");//เช็ครหัสผ่านให้ตรง
