@@ -20,7 +20,7 @@ public class ShowDetailByUser extends AppCompatActivity {
 
     private ImageView pic1ImageView, pic2ImageView;
 
-    private Button button;
+    private Button button, orderButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,8 +48,23 @@ public class ShowDetailByUser extends AppCompatActivity {
             }
         });
 
+        orderButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                confirmOrder();
+
+            }   // onClick
+        });
+
 
     }   // Main Method
+
+    private void confirmOrder() {
+
+
+
+    }   // confirmOrder
 
     private void showView() {
 
@@ -84,6 +99,7 @@ public class ShowDetailByUser extends AppCompatActivity {
         pic1ImageView = (ImageView) findViewById(R.id.imageView10);
         pic2ImageView = (ImageView) findViewById(R.id.imageView11);
         button = (Button) findViewById(R.id.button10);
+        orderButton = (Button) findViewById(R.id.button6);
 
 
     }

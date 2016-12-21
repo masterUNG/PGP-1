@@ -37,6 +37,7 @@ public class ListPostByUser extends AppCompatActivity {
             final String[] titleStrings = new String[jsonArray.length()];
             final String[] endStrings = new String[jsonArray.length()];
             final String[] statusStrings = new String[jsonArray.length()];
+            final String[] statusShowStrings = new String[jsonArray.length()];
             final String[] textStrings = new String[jsonArray.length()];
             final String[] startStrings = new String[jsonArray.length()];
             final String[] pic1Strings = new String[jsonArray.length()];
@@ -50,6 +51,7 @@ public class ListPostByUser extends AppCompatActivity {
                 titleStrings[i] = jsonObject.getString("post_tiltle");
                 endStrings[i] = jsonObject.getString("post_data_end");
                 statusStrings[i] = jsonObject.getString("status_reserv_id");
+                statusShowStrings[i] = showStatus(statusStrings[i]);
                 textStrings[i] = jsonObject.getString("post_text");
                 startStrings[i] = jsonObject.getString("post_data_ster");
                 pic1Strings[i] = jsonObject.getString("post_pic");
@@ -60,7 +62,7 @@ public class ListPostByUser extends AppCompatActivity {
             ListView listView = (ListView) findViewById(R.id.livPostByUser);
 
             MyPostAdapter myPostAdapter = new MyPostAdapter(ListPostByUser.this,
-                    titleStrings, endStrings, statusStrings);
+                    titleStrings, endStrings, statusShowStrings);
             listView.setAdapter(myPostAdapter);
 
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -88,5 +90,14 @@ public class ListPostByUser extends AppCompatActivity {
 
 
     }   // Main Method
+
+
+    private String showStatus(String statusString) {
+
+        String[] strings = new String[]{"กำลังขาย", "จอง", "สิ้นสุด"};
+        int i = Integer.parseInt(statusString);
+
+        return strings[i];
+    }
 
 }   // Main Class
