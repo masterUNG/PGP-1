@@ -1,8 +1,11 @@
 package anuson.komkid.permitgeographypro;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -59,6 +62,24 @@ public class ListPostByUser extends AppCompatActivity {
             MyPostAdapter myPostAdapter = new MyPostAdapter(ListPostByUser.this,
                     titleStrings, endStrings, statusStrings);
             listView.setAdapter(myPostAdapter);
+
+            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                    Intent intent = new Intent(ListPostByUser.this, ShowDetailByUser.class);
+                    intent.putExtra("post_tiltle", titleStrings[i]);
+                    intent.putExtra("post_data_end", endStrings[i]);
+                    intent.putExtra("status_reserv_id", statusStrings[i]);
+                    intent.putExtra("post_text", textStrings[i]);
+                    intent.putExtra("post_data_ster", startStrings[i]);
+                    intent.putExtra("post_pic", pic1Strings[i]);
+                    intent.putExtra("post_pic_two", pic2Strings[i]);
+                    startActivity(intent);
+
+
+                }
+            });
 
 
         } catch (Exception e) {
