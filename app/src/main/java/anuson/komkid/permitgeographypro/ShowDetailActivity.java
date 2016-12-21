@@ -2,6 +2,7 @@ package anuson.komkid.permitgeographypro;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,6 +43,13 @@ public class ShowDetailActivity extends AppCompatActivity {
         //Show View
         showView();
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
 
     }   // Main Method
 
@@ -51,13 +59,21 @@ public class ShowDetailActivity extends AppCompatActivity {
         textView.setText(textString);
         startTextView.setText(startString);
         endTextView.setText(endString);
-        statusTextView.setText(statusString);
+        statusTextView.setText(showStatus(statusString));
 
         Picasso.with(ShowDetailActivity.this)
                 .load(urlPic1String).into(pic1ImageView);
         Picasso.with(ShowDetailActivity.this)
                 .load(urlPic2String).into(pic2ImageView);
 
+    }
+
+    private String showStatus(String statusString) {
+
+        String[] strings = new String[]{"กำลังขาย", "จอง", "สิ้นสุด"};
+        int i = Integer.parseInt(statusString);
+
+        return strings[i];
     }
 
     private void bindWidget() {
